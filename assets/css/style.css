@@ -64,6 +64,11 @@ button:focus {
     box-shadow: 3px 3px black, inset 0px 0px 20px black;
 }
 
+button:hover {
+    width: 145px;
+    height: 145px;
+}
+
 #scores {
     display: flex;
     justify-content: space-between;
