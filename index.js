@@ -33,6 +33,10 @@ function playgame() {
     window.alert("The computer chose " + compchoice);
     result(userchoice, compchoice);
     console.log(userchoice, compchoice);
+    console.log(wins, ties, losses);
+    document.getElementById("win").innerHTML = 'Wins: ' + wins
+    document.getElementById("tie").innerHTML = 'Ties: ' + ties
+    document.getElementById("loss").innerHTML = 'Losses: ' + losses
   };
 
   //Results
