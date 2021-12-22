@@ -1,38 +1,38 @@
-var compOp = ["Rock", "Paper", "Scissors"];
+var comOption = ["Rock", "Paper", "Scissors"];
 
 var wins = 0;
 var ties = 0;
 var losses = 0;
 
-function playgame() {
-  //User choices
+function playGame() {
+  //User Choices
 
   document.getElementById("rock").onclick = function () {
-    var userchoice = "Rock";
-    window.alert("You choose " + userchoice);
-    computerdecision(userchoice);
+    var userChoice = "Rock";
+    window.alert("You choose " + userChoice);
+    computerDecision(userChoice);
   };
 
   document.getElementById("paper").onclick = function () {
-    var userchoice = "Paper";
-    window.alert("You choose " + userchoice);
-    computerdecision(userchoice);
+    var userChoice = "Paper";
+    window.alert("You choose " + userChoice);
+    computerDecision(userChoice);
   };
 
   document.getElementById("scissors").onclick = function () {
-    var userchoice = "Scissors";
-    window.alert("You choose " + userchoice);
-    computerdecision(userchoice);
+    var userChoice = "Scissors";
+    window.alert("You choose " + userChoice);
+    computerDecision(userChoice);
   };
 
-  //Computer decision making
+  //Computer Decision making
 
-  var computerdecision = function (userchoice) {
-    var index = Math.floor(Math.random() * compOp.length);
-    var compchoice = compOp[index];
-    window.alert("The computer chose " + compchoice);
-    result(userchoice, compchoice);
-    console.log(userchoice, compchoice);
+  var computerDecision = function (userChoice) {
+    var index = Math.floor(Math.random() * comOption.length);
+    var compChoice = comOption[index];
+    window.alert("The computer chose " + compChoice);
+    result(userChoice, compChoice);
+    console.log('You chose: ' + userChoice, 'Computer chose: ' + compChoice);
     console.log(wins, ties, losses);
     document.getElementById("win").innerHTML = 'Wins: ' + wins
     document.getElementById("tie").innerHTML = 'Ties: ' + ties
@@ -41,14 +41,14 @@ function playgame() {
 
   //Results
 
-  var result = function (userchoice, compchoice) {
-    if (userchoice === compchoice) {
+  var result = function (userChoice, compChoice) {
+    if (userChoice === compChoice) {
       ties++;
       window.alert("It's a tie!");
     } else if (
-      (userchoice === "Rock" && compchoice === "Scissors") ||
-      (userchoice === "Paper" && compchoice === "Rock") ||
-      (userchoice === "Scissors" && compchoice === "Paper")
+      (userChoice === "Rock" && compChoice === "Scissors") ||
+      (userChoice === "Paper" && compChoice === "Rock") ||
+      (userChoice === "Scissors" && compChoice === "Paper")
     ) {
       wins++;
       window.alert("You win!");
@@ -59,4 +59,4 @@ function playgame() {
   };
 }
 
-playgame();
+playGame();

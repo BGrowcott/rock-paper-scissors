@@ -30,6 +30,7 @@ main {
     padding: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: #8becec;
+    border-radius: 5px;
 }
 
 #game h1 {
@@ -58,6 +59,7 @@ button {
     cursor: pointer;
     padding-top: 113px;
     border: 5px solid black;
+    border-radius: 5px;
 }
 
 button:focus {
